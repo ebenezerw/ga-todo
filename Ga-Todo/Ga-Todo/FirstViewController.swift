@@ -8,9 +8,11 @@
 
 import UIKit
 
+var list = ["Build a Swift App", "Build a MEAN app", "Learn React Native", "Complete Final Project"]
+
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var list = ["Build a Swift App", "Build a MEAN app", "Learn React Native", "Complete Final Project"]
+    
 
     @IBOutlet weak var myTableView: UITableView!
     
@@ -35,11 +37,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
-            self.list.remove(at: indexPath.row)
+            list.remove(at: indexPath.row)
             myTableView.reloadData()
         }
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        myTableView.reloadData()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

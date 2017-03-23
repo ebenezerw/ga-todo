@@ -9,6 +9,20 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet weak var input: UITextField!
+    
+    @IBAction func item(_ sender: AnyObject)
+        
+    {
+        if(input.text != "")
+        {
+            list.append(input.text!)
+            input.text = ""
+        }
+        
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
