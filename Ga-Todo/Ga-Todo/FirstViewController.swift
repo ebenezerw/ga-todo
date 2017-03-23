@@ -8,7 +8,11 @@
 
 import UIKit
 
+// This is the lists of tasks which is set as a global variable.
+
 var list = ["Build a Swift App", "Build a MEAN app", "Learn React Native", "Complete Final Project"]
+
+// This allows the FirstViewController to make use of the methods in the below ui elements.
 
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -16,6 +20,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     @IBOutlet weak var myTableView: UITableView!
     
+    //This allows all items in the list to be repeated on the first view controller
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -23,7 +28,7 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     
-    
+    //this allows each item in the list to appear in its own cell so we can perform crud actions on individual items
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -33,11 +38,16 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return(cell)
     }
     
+    //allows you to delete items from the list
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
             list.remove(at: indexPath.row)
+            
+            //reloads the view after deleting an item
+            
             myTableView.reloadData()
         }
     }

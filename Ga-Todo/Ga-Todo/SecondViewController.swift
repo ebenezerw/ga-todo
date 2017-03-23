@@ -14,11 +14,13 @@ class SecondViewController: UIViewController {
     
     @IBAction func item(_ sender: AnyObject)
         
+    
+        
     {
-        if(input.text != "")
+        if(input.text != "") //if input field is not empty append input text to list variable
         {
             list.append(input.text!)
-            input.text = ""
+            input.text = "" //empty the input text field after appending previous text to list
         }
         
         
