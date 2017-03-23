@@ -1,6 +1,6 @@
 # GA To Do App by Ebenezer & Hannah
 
-##Simple To Do List App in Swift
+## Simple To Do List App in Swift
 
 * We chose to create an app using Swift because we are interested in mobile development
   * WWDC 2014 - Apple introduced Swift at their annual developers conference.
@@ -17,6 +17,6 @@
   * How would you approach building an app to work on multiple iOS devices?
   * What are the disadvantages of Swift?
 
-##Install Instructions
-* Latest versions of macOS 
+## Install Instructions
+* Latest versions of macOS
 * Latest version of Xcode
